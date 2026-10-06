@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>🎄 Pozito Navideño 2026</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="fondo"></div>
+
+<header class="header">
+
+    <div class="tituloBox">
+
+        <img
+            src="imagen.jpeg"
+            class="logo"
+            alt="Logo Pozito Navideño"
+        >
+
+        <div class="tituloTexto">
+
+            <h1>
+                🎄 POZITO NAVIDEÑO 🎄
+            </h1>
+
+            <p>
+                🎅 Sistema de Puntajes y Ranking 🎅
+            </p>
+
+            <span>
+                🎁 04 de octubre al 22 de diciembre de 2026 🎁
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="fechaHora">
+
+        <div id="fechaActual">
+            📅 Cargando fecha...
+        </div>
+
+        <div id="horaActual">
+            🕒 Cargando hora...
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="estadisticas">
+
+    <div class="card">
+
+        <div class="icono">
+            👥
+        </div>
+
+        <div>
+
+            <h2 id="cantidadJugadores">
+                0
+            </h2>
+
+            <p>
+                Participantes
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icono">
+            👑
+        </div>
+
+        <div>
+
+            <h2 id="liderActual">
+                -
+            </h2>
+
+            <p>
+                Líder actual
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icono">
+            ⭐
+        </div>
+
+        <div>
+
+            <h2 id="puntosTotales">
+                0
+            </h2>
+
+            <p>
+                Puntos Totales
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icono">
+            🏆
+        </div>
+
+        <div>
+
+            <h2 id="promedioPuntos">
+                0
+            </h2>
+
+            <p>
+                Promedio
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="botones">
+
+    <button
+        class="btn verde"
+        onclick="agregarJugador()">
+
+        ➕ Agregar Persona
+
+    </button>
+
+
+    <button
+        class="btn azul"
+        onclick="mostrarResumen()">
+
+        📋 Ver Resumen
+
+    </button>
+
+
+    <button
+        class="btn naranja"
+        onclick="irRuleta()">
+
+        🎡 Ruleta
+
+    </button>
+
+
+    <button
+        class="btn rojo"
+        onclick="vaciarTodo()">
+
+        🗑 Vaciar Todo
+
+    </button>
+
+
+    <button
+        class="btn morado"
+        onclick="activarJuly()">
+
+        🎤 JULY
+
+    </button>
+
+
+    <button
+        class="btn negro"
+        onclick="modoOscuro()">
+
+        🌙 Modo Oscuro
+
+    </button>
+
+</section>
+
+
+<section class="panel">
+
+    <div class="busqueda">
+
+        <input
+            id="buscador"
+            type="text"
+            placeholder="🔍 Buscar jugador..."
+            oninput="renderTabla()"
+        >
+
+
+        <select
+            id="orden"
+            onchange="renderTabla()">
+
+            <option value="puntaje">
+                🏆 Mayor Puntaje
+            </option>
+
+            <option value="az">
+                🔤 A - Z
+            </option>
+
+            <option value="za">
+                🔤 Z - A
+            </option>
+
+        </select>
+
+    </div>
+
+</section>
+
+
+<section class="ranking">
+
+    <h2>
+        🎄🏆 Ranking Navideño 🏆🎄
+    </h2>
+
+    <div id="podio"></div>
+
+</section>
+
+
+<section class="tablaBox">
+
+    <div class="tablaTitulo">
+
+        <h2>
+            🎅 Tabla de Puntajes 🎅
+        </h2>
+
+        <p>
+            🎁 Pozito Navideño 2026 🎁
+        </p>
+
+    </div>
+
+
+    <div class="tablaScroll">
+
+        <table>
+
+            <thead>
+
+                <tr id="encabezado">
+
+                    <th>
+                        JUGADOR
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tbody"></tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    🎄 POZITO NAVIDEÑO 🎄 2026
+
+    <br>
+
+    🎅 Sistema Inteligente de Competencia
+
+    <br>
+
+    🎁 04 de octubre al 22 de diciembre de 2026 🎁
+
+    <br>
+
+    ⭐ ¡Que gane el mejor! ⭐
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
